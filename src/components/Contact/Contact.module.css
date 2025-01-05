@@ -1,0 +1,32 @@
+.cardWrapper {
+  position: relative;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  width: 280px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 25%;
+  right: 4%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.name,
+.number {
+  font-weight: bold;
+  overflow: hidden;
+  width: 165px;
+}
+
+.nameWrapper,
+.numberWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
