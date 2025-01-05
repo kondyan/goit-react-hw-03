@@ -2,6 +2,7 @@ import css from "./ContactForm.module.css";
 import { useId } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import numberNormalize from "../../util/numberNormalize.js";
 
 const ContactsSchema = Yup.object().shape({
   name: Yup.string()
@@ -67,7 +68,7 @@ const ContactForm = ({ lastContact, onAdd }) => {
               id={numberFieldId}
               onChange={(e) => {
                 const temp = e.target.value;
-                const normalizeValue = temp.replace(/\D/, "");
+                const normalizeValue = numberNormalize(temp);
 
                 setFieldValue("number", normalizeValue);
               }}
